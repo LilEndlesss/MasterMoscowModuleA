@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Палитра аквамарина */
+    color: #333;
+    margin: 0;
+}
+
+header {
+    background-color: #81d8e6; /* Цвет морской волны */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px; /* Изменено для примера */
+    height: 50px; /* Изменено для примера */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+.login-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #fff; /* Добавлено свойство border */
+}
+
+.success-auth-message {
+    margin-top: 20px;
+    color: #008000; /* Зеленый цвет для сообщения об успешной аутентификации */
+}
+
+.additional-links a {
+    text-decoration: none;
+    color: #007bff; /* Цвет ссылок */
+    margin-right: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.additional-links a:hover {
+    color: #0056b3; /* Измененный цвет ссылок при наведении */
+}
+
+.success-message,
+.error-message,
+.required-fields-message {
+    color: #ff0000; 
+    margin-top: 10px;
+}
+
+#password-recovery-form {
+    margin-top: 20px;
+}
+
+.additional-links a,
+#forgot-password-link,
+#recover-password-button{
+    margin-top: 10px; 
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2eaadb;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.additional-links a:hover,
+#forgot-password-link:hover,
+#recover-password-button:hover {
+    background-color: #007bb5;
+}
+#guest-nav {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0; 
+}
+
+#guest-nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#guest-nav a {
+    padding: 10px 20px;
+    background-color: #2eaadb;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#guest-nav a:hover {
+    background-color: #007bb5;
+}
+
+#password-recovery-form label,
+#password-recovery-form input,
+#password-recovery-form button {
+    margin-bottom: 10px;
+}
+
+#password-recovery-form button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}

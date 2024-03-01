@@ -1,0 +1,211 @@
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.button-registration {
+  background-color: #2eaadb; 
+}
+
+
+.button-authentication {
+  background-color: #24a4ff;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff; 
+  color: #333;
+  margin: 0;
+}
+
+header {
+  background-color: #81d8e6;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+main {
+  padding: 20px;
+}
+
+.main-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.check-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.features-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.features-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features-section li {
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #20b2aa;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  margin: 0;
+}
+
+header {
+  background-color: #81d8e6;
+  padding: 10px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+.subscription-section {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+input, checkbox {
+  margin-bottom: 16px;
+  padding: 8px;
+}
+
+button {
+  background-color: #2eaadb;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #007bb5;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 30px;
+  height: 100vh;
+}
+
+#top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#slider {
+  width: 800px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slider-image {
+  height: 508px;
+  object-fit: cover;
+  display: none;
+  border-radius: 5px;
+}
+
+.arrow {
+  width: 120px;
+  height: 120px;
+}
+
+.arrow-right {
+  transform: rotate(180deg);
+}
+
+.block {
+  display: block;
+  animation: show 1.3s;
+  margin: 0 auto;
+}
+
+.pagination-circle {
+  width: 25px;
+  height: 25px;
+  border: 2px solid deepskyblue;
+  border-radius: 50%;
+}
+
+.active {
+  background-color: purple;
+}
+
+#bottom {
+  display: flex;
+  column-gap: 25px;
+}
+
+.contact-info {
+  padding: 20px
+}
+
+.nav-end{
+  padding: 20px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}

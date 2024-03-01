@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - NormoControl.ru</title>
+    <link rel="stylesheet" href="media/css/registration.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="media/logo/logo.png" alt="Логотип NormoControl.ru" style="width: 50px; height: 50px;">
+    </div>
+    <nav>
+        <ul id="guest-nav">
+            <li><a href="index.html" class="button button-registration">Главная</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+    <section class="registration-section">
+        <h1>Регистрация</h1>
+        <form id="registrationForm" action="#" method="post" onsubmit="return registerUser()">
+            <label for="fullname">ФИО:</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="login">Логин:</label>
+            <input type="text" id="login" name="login" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="confirm-password">Повторите пароль:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <div class="password-requirements">
+                <p>Требования к паролю:</p>
+                <ul>
+                    <li id="length">Минимум 8 символов</li>
+                    <li id="uppercase">Минимум одна заглавная буква</li>
+                    <li id="number">Минимум одна цифра</li>
+                </ul>
+            </div>
+
+            <div class="consent-section">
+                <label for="agree">Согласие на обработку персональных данных:</label>
+                <input type="checkbox" id="agree" name="agree" required>
+                <button type="submit" disabled>Зарегистрироваться</button>
+            </div>
+        </form>
+        
+        <div class="success-message" style="display: none;">
+            <p>Регистрация прошла успешно!</p>
+            <a href="profile.html" class="button">Перейти в Личный кабинет</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+</footer>
+
+<script>
+    function validatePassword() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirm-password").value;
+
+        var isLengthValid = password.length >= 8;
+        var hasUppercase = /[A-Z]/.test(password);
+        var hasNumber = /\d/.test(password);
+
+        var passwordsMatch = password === confirmPassword;
+
+        return isLengthValid && hasUppercase && hasNumber && passwordsMatch;
+    }
+
+    document.getElementById("password").addEventListener("input", updateSubmitButton);
+    document.getElementById("confirm-password").addEventListener("input", updateSubmitButton);
+
+    function updateSubmitButton() {
+        var isValid = validatePassword();
+        document.querySelector(".consent-section button").disabled = !isValid;
+    }
+
+    document.getElementById("registrationForm").addEventListener("submit", function (event) {
+        if (!validatePassword()) {
+            alert("Пароли не соответствуют требованиям или не совпадают!");
+            event.preventDefault();
+        }
+    });
+
+    function registerUser() {
+        document.getElementById("registrationForm").style.display = "none";
+        document.querySelector(".success-message").style.display = "block";
+        return false;
+    }
+</script>
+
+
+</body>
+</html>
